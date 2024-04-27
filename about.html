@@ -1,0 +1,20 @@
+{% extends 'layouts.html'%}
+{% block content %}
+
+<style>
+   p {text-align: center;}  
+
+</style>
+<div  class="top-right">
+<div  style = "position:relative; line-height:15px; left:20px ;top:80px ;  font-size: 90px"><p style="   width: 500px;
+   height: 300px;padding: 0px; border: 4px solid white;"><font size="3" face="verdana" color="blue">
+   "This Artificial Intelligence (AI) project uses<br> different image <br>processing algorithm
+   for the tumor<br> diagnosis i.e detection, feature extraction & classification. 
+   This computer aided algorithms <br>for detetction and  diagnosis of cerebrum tumor<br> have
+   been developed to support  radiologists<br> to give an accurate diagnosis and to <br>reduce the  rate 
+   of number of wrong decisions <br>of brain diseases."  </font>
+   </p></div></div>
+    <div style="position:relative; left:500px ;bottom:320px "> <img src="{{ url_for('static', filename='why.jpg') }}" width="800" 
+    height="600" >    </div>
+
+   {% endblock content %}
