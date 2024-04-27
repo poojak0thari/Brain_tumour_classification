@@ -1,0 +1,29 @@
+{% extends 'layouts.html'%}
+{% block content %}
+<div>
+    <p style="text-align: center; color: lightcoral;">Please upload your Image here for detection</p>
+
+
+    <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
+
+<p style="text-align: center;"> <button type="'button" style=" color: brown; align-items: center; justify-content: center;
+padding: 15px 32px;
+text-align: center;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px; text-align: center; "> <label for="file" style="cursor: pointer; "> Upload Image</label> </button> </p>
+<p><img id="output" width="200" /></p>
+
+<script>
+var loadFile = function(event) {
+var image = document.getElementById('output');
+image.src = URL.createObjectURL(event.target.files[0]);
+};
+</script>
+    
+<button id="fileDel" class="btn btn-primary btn-block" style="color:black">Remove Image</button>
+   
+    <button id="fileSubmit" class="btn btn-primary btn-block" style="color:black">Submit Image</button>
+     
+</div>
+{% endblock content %}
